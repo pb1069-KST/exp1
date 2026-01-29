@@ -1,0 +1,18 @@
+# Architecture
+K_fc: 8
+K_sb: 10
+d_model: 64
+
+input_dim: 78
+num_classes: 15
+k_list: [5, 10, 20, 30, 40, 50, 60, 78] # 총 피처 수 78에 맞춤
+
+# Training
+lambda_delta: 1.5
+lambda_div: 0.5
+tau_init: 2.0
+tau_min: 0.5
+tau_decay: 0.95
+learning_rate: 0.001
+batch_size: 128
+epochs: 20
