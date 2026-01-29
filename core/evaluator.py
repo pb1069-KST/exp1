@@ -26,7 +26,9 @@ class BSFSPerformanceEvaluator:
         all_preds = np.argmax(all_probs, axis=1)
 
         metrics = {
-            "f1_macro": f1_score(all_targets, all_preds, average="macro"),
+            "f1_macro": f1_score(
+                all_targets, all_preds, average="macro", zero_division=0
+            ),
             "report": classification_report(all_targets, all_preds, output_dict=True),
         }
 
